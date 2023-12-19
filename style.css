@@ -1,19 +1,36 @@
 * {
-
     margin: 0;
     padding: 0;
 }
 
-body{
-    background-color: #F4F3EF;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+@font-face {
+    font-family: Poppins;
+    src: url(font/Poppins-Light.ttf);
 }
 
+body{
+    background-color: #F4F3EF;
+    font-family: 'Poppins' ;
+}
+
+button{
+    font-family: 'Poppins';
+}
+
+/* H1 graag slechts gebruiken voor de paarse header op elke pagina */
 h1{
-    font-weight: bold;
+    font-weight: bolder;
     color: #9875B7;
     margin-left: 2rem;
     margin-top: 5rem;   
+}
+
+/* H2 graag slechts gebruiken voor de tekst onder de H1 zoals op 
+de aanmelden pagina */
+h2{
+    font-size: 18px;
+    font-weight: 200;
+    margin-left: 2rem;
 }
 
 h3{
@@ -21,6 +38,10 @@ h3{
     text-align: center; 
     font-weight: 200;
     font-size: 20px;
+}
+
+p{
+    font-size: 16px;
 }
 
 .add_activity_button{
@@ -73,3 +94,99 @@ h3{
     height: 50%;
     border-radius: 50px;
   }
+
+  /* vanaf hier is voor de aanmelden HTML poppies van me */
+
+  .filtercontainer{
+    margin: 2rem auto 0.5rem auto;
+    align-items: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .tweeknoppen{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 1.5rem 0 1.5rem;
+  }
+
+  .filterbutton{
+    height: 40px;
+    width: 175px;
+    background-color: #CCCCCC;
+    border: none;
+    border-radius: 20px;
+    box-shadow: inset 0 1px 4px -1px  black;
+    margin: auto;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .filterbutton.selected{
+    background-color: #9875B7;
+    color: white;
+  } 
+
+  .activitycontainer{
+    margin: 2rem;
+    background-color: white;
+    border-radius: 25px;
+  }
+
+  .activity-info{
+    display: flex;
+  }
+
+  .activity-name{
+    margin: 1.5rem 5rem 1.5rem 1rem;
+    font-weight: bold;
+  }
+
+  .activity-picture{
+    width: 10rem;
+    height: 12.5rem;
+    margin: 0 1rem 1.5rem 1rem;
+  }
+
+  .participant-counter{
+    display: flex;
+    margin: 1.5rem 1rem 1.5rem 0;
+    
+    position: absolute;
+    right: 2rem;
+    font-weight: bold;
+  }
+  .fa-solid{
+    margin-top: 4px;
+  }
+
+  .date-and-time{
+    display: flex;
+    font-weight: bold;
+  }
+
+  .activity-text{
+    line-height: 20px;
+    margin-top: 5px;
+    margin-right: 1rem;
+  }
+
+  .aanmeldbutton{
+    height: 35px;
+    width: 140px;
+    margin-top: 1rem;  
+    margin-bottom: 1.5rem;
+
+    background-color: #9875B7;
+    border: none;
+    border-radius: 17.5px;
+    box-shadow: inset 0 1px 4px -1px  black;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  /* Tot hier was voor de aanmelden HTML Bitches */
