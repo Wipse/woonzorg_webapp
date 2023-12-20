@@ -9,9 +9,9 @@ function addConfirm() {
 
   // vanaf hier voor aanmeld pagina
 
-  let onderlichfilter = getElementById("filter-onderlichaam")
-  let bovenlichfilter = getElementById("filter-bovenlichaam")
-  let allesfilter = getElementById("filter-alles")
+  let onderlichfilter = document.getElementById("filter-onderlichaam")
+  let bovenlichfilter = document.getElementById("filter-bovenlichaam")
+  let allesfilter = document.getElementById("filter-alles")
 
   onderlichfilter.addEventListener("click", function() {
     onderlichfilter.classList.add("selected");
