@@ -65,12 +65,6 @@ p{
     display: flex;
 }   
 
-.menubar{
-    width: 100%;
-    position: absolute;
-        bottom: 0;
-        display: none;
-}
 
 .modal {
     display: flex;
@@ -206,3 +200,12 @@ p{
   }
 
   /* Tot hier was voor de aanmelden HTML Bitches */
+
+  .menubar{
+    position: absolute;
+    bottom: 0;
+  }
+
+  .menubar img {
+    width: 27rem;
+  }
