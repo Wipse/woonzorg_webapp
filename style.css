@@ -209,3 +209,21 @@ p{
   .menubar img {
     width: 27rem;
   }
+
+  /* reserveren pagina */
+
+  .terug i {
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: #9875B7;
+    border: .2rem solid #9875B7; 
+    border-radius: 50%;
+    font-size: 1.7rem;
+    margin-left: 2rem;
+  }
+
+  
