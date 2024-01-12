@@ -202,14 +202,15 @@ p{
 
   /* Tot hier was voor de aanmelden HTML Bitches */
 
-  .menubar{
-    position: absolute;
+  .menubar {
+    position: relative; /* Change from absolute to fixed */
     bottom: 0;
-  }
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Adjust z-index as needed */
+}
 
-  .menubar img {
-    width: 27rem;
-  }
+  
 
   /* reserveren pagina */
 
@@ -227,4 +228,49 @@ p{
     margin-left: 2rem;
   }
 
+/* H1 graag slechts gebruiken voor de paarse header op elke pagina */
+h4 {
+  font-weight: bolder;
+  color: #9875B7;
+  margin-left: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 1rem; /* Add margin-bottom */
+}
+
+/* H2 graag slechts gebruiken voor de tekst onder de H1 zoals op 
+de aanmelden pagina */
+h5 {
+  font-size: 18px;
+  font-weight: 200;
+  margin-left: 2rem;
+  margin-bottom: 1rem; /* Add margin-bottom */
+}
+
+.add_activity_button-1 {
+  height: 66px;
+  width: 66px;
+  background-color: #9875B7;
+  border: none;
+  border-radius: 33px;
+  box-shadow: inset 0 2px 4px -2px black;
+  margin: auto;
+  cursor: pointer;
+  margin-bottom: 1rem; /* Add margin-bottom */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+
+.menubar-1 {
+  position: relative; /* Change from absolute to fixed */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100; /* Adjust z-index as needed */
+  margin-top: 1rem; /* Add margin-top */
+}
   
