@@ -5,6 +5,7 @@
   function closeModal() {
     document.getElementById('myModal').style.display = 'none';
   }
+  */
   
 
   // vanaf hier voor aanmeld pagina
@@ -29,7 +30,7 @@ allesfilter.addEventListener("click", function() {
     allesfilter.classList.add("selected");
     onderlichfilter.classList.remove("selected");
     bovenlichfilter.classList.remove("selected");
-}) */
+}) 
 
 // Code voor aanmelden.html
 document.addEventListener('DOMContentLoaded', function () {
@@ -47,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
           var activityDetails = {
               name: 'De Ballenvanger',
               participants: '3/10',
-              picture: 'images/laws.jpg',
+              picture: 'images/ballenvanger.png',
               dateAndTime: '07-12-23 / 13:00',
               description: 'Met een bak aan je voet vast, moet je in deze activiteit alle ballen vangen door je been op de grond te zetten.'
           };
