@@ -1,36 +1,70 @@
-/*function addConfirm() {
-    document.getElementById('myModal').style.display = 'block';
-  }
-  
-  function closeModal() {
-    document.getElementById('myModal').style.display = 'none';
-  }
-  */
-  
+document.addEventListener("DOMContentLoaded", function() {
+    const aanmeldButtons = document.querySelectorAll(".aanmeldbutton");
 
-  // vanaf hier voor aanmeld pagina
+    aanmeldButtons.forEach(function(button) {
+        button.addEventListener("click", function() {
+            const modal = document.querySelector(".modal");
+            modal.style.display = "block";
 
-  let onderlichfilter = document.getElementById("filter-onderlichaam")
-  let bovenlichfilter = document.getElementById("filter-bovenlichaam")
-  let allesfilter = document.getElementById("filter-alles")
+            const modalButtons = modal.querySelectorAll("button");
+            modalButtons.forEach(function(modalButton) {
+                modalButton.addEventListener("click", function() {
 
-  onderlichfilter.addEventListener("click", function() {
-    onderlichfilter.classList.add("selected");
-    bovenlichfilter.classList.remove("selected");
-    allesfilter.classList.remove("selected");
-})
+                    modal.style.display = "none";
+                });
+            });
+        });
+    });
+});
 
-bovenlichfilter.addEventListener("click", function() {
-    bovenlichfilter.classList.add("selected");
-    onderlichfilter.classList.remove("selected");
-    allesfilter.classList.remove("selected");
-})
+// Dit is de javascript code voor aanmelden.html
 
-allesfilter.addEventListener("click", function() {
-    allesfilter.classList.add("selected");
-    onderlichfilter.classList.remove("selected");
-    bovenlichfilter.classList.remove("selected");
-}) 
+  document.addEventListener('DOMContentLoaded', function () {
+    let onderlichfilter = document.getElementById("filter-onderlichaam");
+    let bovenlichfilter = document.getElementById("filter-bovenlichaam");
+    let allesfilter = document.getElementById("filter-alles");
+    let activityContainers = document.getElementsByClassName("activitycontainer");
+
+    onderlichfilter.addEventListener("click", function() {
+        filterActivities("onderlichaam");
+        updateButtonStyle(onderlichfilter);
+    });
+
+    bovenlichfilter.addEventListener("click", function() {
+        filterActivities("bovenlichaam");
+        updateButtonStyle(bovenlichfilter);
+    });
+
+    allesfilter.addEventListener("click", function() {
+        showAllActivities();
+        updateButtonStyle(allesfilter);
+    });
+
+    function filterActivities(category) {
+        for (let i = 0; i < activityContainers.length; i++) {
+            let activityContainer = activityContainers[i];
+            if (activityContainer.id === category) {
+                activityContainer.style.display = "block";
+            } else {
+                activityContainer.style.display = "none";
+            }
+        }
+    }
+
+    function showAllActivities() {
+        for (let i = 0; i < activityContainers.length; i++) {
+            activityContainers[i].style.display = "block";
+        }
+    }
+
+    function updateButtonStyle(selectedButton) {
+        let buttons = document.getElementsByClassName("filterbutton");
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].classList.remove("selected");
+        }
+        selectedButton.classList.add("selected");
+    }
+});
 
 // Code voor aanmelden.html
 document.addEventListener('DOMContentLoaded', function () {
@@ -56,7 +90,6 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   }
 
-  // Repeat similar code for aanmeldenButton2 and aanmeldenButton3
 });
 
 
@@ -72,7 +105,6 @@ document.addEventListener('DOMContentLoaded', function () {
               selectedActivity = JSON.parse(selectedActivity);
               console.log('Aanmelding opgehaald van localStorage:', selectedActivity);
 
-              // Voeg hier de logica toe om de activiteit weer te geven
               displayActivity(selectedActivity);
           } else {
               console.log('Geen aanmelding gevonden in localStorage.');
@@ -81,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function displayActivity(activityDetails) {
-      // Maak elementen om activiteit weer te geven
+
       var activityDiv = document.createElement('div');
       activityDiv.className = 'activitycontainer';
 
@@ -102,12 +134,9 @@ document.addEventListener('DOMContentLoaded', function () {
       var lowerDiv = document.createElement('div');
       lowerDiv.className = 'activity-info lower';
 
-      // Voeg hier de logica toe om de rest van de activiteit weer te geven
-
       activityDiv.appendChild(upperDiv);
       activityDiv.appendChild(lowerDiv);
 
-      // Voeg het gemaakte activiteit-element toe aan het activitiesContainer
       activitiesContainer.appendChild(activityDiv);
   }
 });
